@@ -8,15 +8,18 @@
 
 (custom-set-variables
   '(ein:url-or-port
-    '(
+    (quote
+     (
       "http://severino:30000"
       "http://ulysses:30000"
       "http://localhost:8888"
       "http://localhost:62000"
       )
-    ))
+    )))
 
 (after! 'projectile
+  (message "Got here!")
   (projectile-add-known-project
-   "/sshx:lem.ib.usp.br:/home/guilherme/Primaset")
+   "/sshx:lem.ib.usp.br:/home/guilherme/Primaset"
+   )
   )
