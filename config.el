@@ -7,11 +7,16 @@
 (set-frame-parameter (selected-frame) 'alpha '(80 . 65))
 
 (custom-set-variables
- '(ein:url-or-port
-   '(
-     "http://severino:30000"
-     "http://ulysses:30000"
-     "http://localhost:8888"
-     )
-   )
- )
+  '(ein:url-or-port
+    '(
+      "http://severino:30000"
+      "http://ulysses:30000"
+      "http://localhost:8888"
+      "http://localhost:62000"
+      )
+    ))
+
+(after! 'projectile
+  (projectile-add-known-project
+   "/sshx:lem.ib.usp.br:/home/guilherme/Primaset")
+  )
