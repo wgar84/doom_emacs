@@ -2,9 +2,9 @@
 
 ;; Place your private configuration here
 
-(setq doom-font (font-spec :family "Fira Mono" :size 13))
+(setq doom-font (font-spec :family "Fira Mono" :size 12))
 
-(set-frame-parameter (selected-frame) 'alpha '(80 . 65))
+(set-frame-parameter (selected-frame) 'alpha '(90 . 65))
 
 (custom-set-variables
   '(ein:url-or-port
@@ -17,6 +17,3 @@
       )
     )))
 
-(after! 'projectile (projectile-add-known-project "~/Documents/Projects/Primaset"))
-
-(map! :n "SPC e" 'ein:notebooklist-login)
