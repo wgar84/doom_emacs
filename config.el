@@ -4,8 +4,8 @@
 
 (setq doom-font (font-spec :family "Fira Mono" :size 12))
 
-(set-frame-parameter (selected-frame) 'alpha '(90 . 65))
-(add-to-list 'default-frame-alist '(alpha . (90 . 65)))
+(set-frame-parameter (selected-frame) 'alpha '(85 . 75))
+(add-to-list 'default-frame-alist '(85 . (alpha . 75)))
 
 (custom-set-variables
   '(ein:url-or-port
@@ -16,5 +16,6 @@
       "http://localhost:8888"
       "http://localhost:62000"
       )
-    )))
+     )))
 
+(map! :n "SPC e" 'ein:notebooklist-login)
