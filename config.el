@@ -4,8 +4,8 @@
 
 (setq doom-font (font-spec :family "Fira Mono" :size 12))
 
-(set-frame-parameter (selected-frame) 'alpha '(85 . 75))
-(add-to-list 'default-frame-alist '(85 . (alpha . 75)))
+;; (set-frame-parameter (selected-frame) 'alpha '(95 . 85))
+(add-to-list 'default-frame-alist '(95 . (alpha . 85)))
 
 (custom-set-variables
   '(ein:url-or-port
