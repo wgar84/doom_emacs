@@ -9,3 +9,5 @@
 ;; (package! zmq)
 ;; (package! py-autopep8)
 ;; (package! emacs-snippets :recipe (:fetcher github :repo "hlissner/emacs-snippets"))
+(package! stan-mode)
+;; (package! jupyter)

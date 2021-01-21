@@ -3,29 +3,28 @@
 
 (doom! :feature
        ;;debugger          ; FIXME stepping through code, to help you add bugs
-       eval              ; run code, run (also, repls)
-       (evil +everywhere); come to the dark side, we have cookies
-       file-templates    ; auto-snippets for empty files
-       (lookup           ; helps you navigate your code and documentation
-        +docsets)        ; ...or in Dash docsets locally
-       snippets          ; my elves. They type so I don't have to
-       spellcheck        ; tasing you for misspelling mispelling
-       syntax-checker    ; tasing you for every semicolon you forget
-       workspaces        ; tab emulation, persistence & separate workspaces
 
        :completion
        company           ; the ultimate code completion backend
        helm              ; the *other* search engine for love and life
-       ;;ido              ; the other *other* search engine...
-       ;;ivy              ; a search engine for love and life
+       ;;ido               ; the other *other* search engine...
+       ;;ivy               ; a search engine for love and life
+
+       :checkers
+       spell             ; tasing you for misspelling mispelling
+       syntax            ; tasing you for every semicolon you forget
+      
+       :term
+       eshell  
 
        :ui
+       workspaces        ; tab emulation, persistence & separate workspaces
        ;;deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
-       doom-modeline     ; a snazzy Atom-inspired mode-line
+       modeline          ; a snazzy Atom-inspired mode-line
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
-       evil-goggles      ; display visual hints when editing in evil
+       ophints           ; display visual hints when editing in evil
        ;;fci               ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        ;;modeline          ; snazzy, Atom-inspired modeline, plus API
@@ -44,10 +43,14 @@
 
        :editor
        ;;(format +onsave)  ; automated prettiness
+       (evil +everywhere); come to the dark side, we have cookies
        ;;lispy             ; vim for lisp, for people who dont like vim
+       file-templates    ; auto-snippets for empty files
        multiple-cursors  ; editing in many places at once
        ;;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
+       snippets          ; my elves. They type so I don't have to
+       fold              ; hideshow basics
 
        :emacs
        (dired            ; making dired pretty [functional]
@@ -56,15 +59,16 @@
         )
        ediff             ; comparing files in Emacs
        electric          ; smarter, keyword-based electric-indent
-       eshell            ; a consistent, cross-platform shell (WIP)
-       hideshow          ; basic code-folding support
        imenu             ; an imenu sidebar and searchable code index
        ;;term              ; terminals in Emacs
        vc                ; version-control and Emacs, sitting in a tree
 
        :tools
        ;;ansible
+       eval              ; run code, run (also, repls)
        docker
+       (lookup           ; helps you navigate your code and documentation
+        +docsets)        ; ...or in Dash docsets locally
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ein                 ; tame Jupyter notebooks with emacs
        ;;gist              ; interacting with github gists
@@ -165,7 +169,7 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#21242b" "#CC6666" "#C2FFDF" "#FFEA00" "#55b3cc" "#FFB8D1" "#96CBFE" "#F8F8F0"])
- '(custom-enabled-themes (quote (doom-Iosvkem)))
+;; '(custom-enabled-themes (quote (doom-Iosvkem)))
  '(custom-safe-themes
    (quote
     ("f2b83b9388b1a57f6286153130ee704243870d40ae9ec931d0a1798a5a916e76" "fefab1b6d3366a959c78b4ed154018d48f4ec439ce652f4748ef22945ca7c2d5" "2a3ffb7775b2fe3643b179f2046493891b0d1153e57ec74bbe69580b951699ca" "a2286409934b11f2f3b7d89b1eaebb965fd63bc1e0be1c159c02e396afb893c8" default)))
